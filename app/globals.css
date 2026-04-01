@@ -1,0 +1,63 @@
+:root {
+  --bg: #e7e4bd;
+  --fg: #000000;
+  --line: #000000;
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: 0 !important;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  padding: 8px;
+}
+
+button {
+  cursor: pointer;
+  background: #ce3939;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.app-root {
+  padding: 16px;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.2fr) minmax(320px, 1fr);
+  gap: 12px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+}
