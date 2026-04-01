@@ -566,17 +566,21 @@ export default function JobTracker() {
       <button
         type="button"
         onClick={() => setBackgroundOpen((prev) => !prev)}
-        style={{ position: "fixed", right: 16, top: 16, zIndex: 20 }}
+        style={{ position: "fixed", right: 76, top: 66, zIndex: 20 }}
       >
         {backgroundOpen ? "Close Background" : "My Background"}
       </button>
       <button
         type="button"
         onClick={() => setEncouragementOpen((prev) => !prev)}
-        style={{ position: "fixed", right: 16, top: 56, zIndex: 20 }}
+        style={{ position: "fixed", right: 76, top: 126, zIndex: 20 }}
       >
         {encouragementOpen ? "Close Encouragement" : "Get Encouragement from LLM"}
       </button>
+      <div style={{ position: "fixed", right: 76, top: 176, zIndex: 20, fontFamily: "Times New Roman", fontStyle: "italic"}}>
+      <p>We all get ghosted and fall into despair.<br></br> 
+      While you may not always want to consult a real friend also in sorrow, <br></br>you can get some kind words from our beloved gpt-4.1-mini.</p>
+      </div>
       {(backgroundOpen || encouragementOpen) ? (
         <div
           onClick={() => {
@@ -637,6 +641,7 @@ export default function JobTracker() {
         <h2 style={{ marginTop: 8, marginBottom: 8, fontSize: 20 }}>
           Get Some Encouragement from LLM
         </h2>
+        
         <button type="button" onClick={onGetEncouragement} disabled={encouraging}>
           {encouraging ? "Thinking..." : "Give Me Encouragement"}
         </button>
